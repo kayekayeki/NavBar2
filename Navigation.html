@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigations </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .navigation-bar{
+            width: 180px;
+        }
+        .navigation-bar ul{
+            background-color: rgb(33, 32, 32);
+            list-style: none;
+            border-radius: 4px;
+            padding: 0px;
+        }
+        .navigation-bar ul li{
+            position: relative;
+            padding: 6px;
+            border-bottom: 1px solid black;
+        }
+        .navigation-bar ul li:last-child{
+            border: none;
+        }
+        .navigation-bar a{
+            text-decoration: none;
+            color: gainsboro;
+            padding-left: 30px;
+            white-space: nowrap;
+        }
+        .sub-bar ul {
+        position: absolute;
+        left: 100%; 
+        top: 0;
+        display: none; 
+        width: 200px;
+        }
+
+        i{
+            float: right;
+        }
+
+
+        .sub-bar:hover{
+            background-color: #5fc8f1;
+        }
+
+        .sub-bar:hover > a{
+            color: white;
+        }
+
+        .sub-bar:hover > ul {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-bar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li class="sub-bar">
+                <a href="">Products <i class='bx bx-caret-right'></i></a>
+                <ul>
+                    <li class="sub-bar">
+                        <a href="">Product 1 <i class='bx bx-caret-right'></i></a>
+                        <ul>
+                            <li><a href="#">Sub Product</a></li>
+                            <li><a href="#">Sub Product</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-bar">
+                        <a href="">Product 2 <i class='bx bx-caret-right'></i></a>
+                        <ul>
+                            <li><a href="#">Sub Product</a></li>
+                            <li><a href="#">Sub Product</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
